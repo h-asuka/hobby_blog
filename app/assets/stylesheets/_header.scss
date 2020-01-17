@@ -1,0 +1,28 @@
+.main-header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
+  .title {
+
+  }
+  .table-content {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    .header-top {
+
+    }
+    .header-article {
+
+    }
+    .header-rank {
+
+    }
+  }
+  .register {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+  }
+}

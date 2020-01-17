@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.main-container {
+  background-color: blue;
+  height: calc(100vh - 160px);
+  padding: 30px 40px 30px 20px;
+  display: flex;
+  .slick-content {
+    width: 60%;
+    .article-rank {
+      height: 270px;
+      background-color: white;
+    }
+    .article-new {
+      height: 270px;
+      background-color: cyan;
+      margin-top: 40px;
+    }
+  }
+  .right-content {
+    margin-left: 80px;
+    width: 30%;
+    .register-content {
+      height: 200px;
+      
+      background-color: darkorange;
+    }
+    .advertising {
+      margin-top: 40px;
+      height: 350px;
+      background-color: darkorchid;
+    }
+  }
+}

@@ -23,5 +23,25 @@
     display: flex;
     justify-content: space-between;
     width: 30%;
+    .new-post {
+
+    }
+    .new-register {
+
+    }
+    .log-in {
+
+    }
+    .search {
+      .search-form {
+        position: relative;
+        .search-field {
+        }
+        .icon-search {
+          position: absolute;
+          right: 0px;
+        }
+      }
+    }
   }
 }

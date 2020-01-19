@@ -5,32 +5,32 @@
 
 .main-container {
   background-color: blue;
-  height: calc(100vh - 160px);
-  padding: 30px 40px 30px 20px;
+  height: calc(100vh - 80px);
+  padding: 50px;
   display: flex;
   .slick-content {
     width: 60%;
     .article-rank {
-      height: 270px;
+      height: 45%;
       background-color: white;
     }
     .article-new {
-      height: 270px;
+      height: 45%;
       background-color: cyan;
-      margin-top: 40px;
+      margin-top: 65px;
     }
   }
   .right-content {
     margin-left: 80px;
     width: 30%;
     .register-content {
-      height: 200px;
+      height: 35%;
       
       background-color: darkorange;
     }
     .advertising {
-      margin-top: 40px;
-      height: 350px;
+      margin-top: 65px;
+      height: 55%;
       background-color: darkorchid;
     }
   }

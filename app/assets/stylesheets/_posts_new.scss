@@ -1,7 +1,40 @@
-.post-content {
-  text-align: center;
-  .header {
-    font-size: 25px;
-    font-weight: 400;
+.post-container {
+  background-color: #EEEEEE;
+  height: calc(100vh - 80px);
+  .post-content {
+    height: calc(100vh - 80px);
+    padding: 50px;
+    width: 70%;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    &__top {
+      font-size: 25px;
+      font-weight: 400;
+    }
+    &__main {
+      &__form {
+        &__title {
+          .post__form__title {
+            width: 80%;
+            padding: 10px;
+          }
+        }
+        &__text {
+          margin-top: 20px;
+          .post__form__text {
+            width: 80%;
+            padding: 10px;
+            height: 500px;
+          }
+        }
+        &__btn {
+          margin-top: 20px;
+          .post__form__btn {
+            
+          }
+        }
+      }
+    }
   }
 }

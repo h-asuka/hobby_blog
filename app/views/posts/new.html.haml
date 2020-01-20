@@ -1,10 +1,14 @@
 =render 'posts/header'
-
-.post-content
-  .header
-    新規記事の作成
-  .content
-    = form_with model: @post, class: :form, local: true do |f|
-      = f.text_field :title, placeholder: "タイトル", class: "form__title"
-      = f.text_area :content, placeholder: "ブログ本文", class: "form__text"
-      = f.submit '投稿する', class: "form__btn"
+.post-container
+  .post-content
+    .post-content__top
+      新規記事の作成
+    .post-content__main
+      = form_with model: @post, class: :form, local: true do |f|
+        .post-content__main__form
+          .post-content__main__form__title
+            = f.text_field :title, placeholder: "タイトル", class: "post__form__title"
+          .post-content__main__form__text
+            = f.text_area :content, placeholder: "ブログ本文", class: "post__form__text"
+          .post-content__main__form__btn
+            = f.submit '投稿する', class: "post__form__btn"

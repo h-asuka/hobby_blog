@@ -32,15 +32,15 @@
     .log-in {
 
     }
-    .search {
-      .search-form {
-        position: relative;
-        .search-field {
-        }
-        .icon-search {
-          position: absolute;
-          right: 0px;
-        }
+  }
+  .search {
+    &__form {
+      position: relative;
+      .search-field {
+      }
+      .search-icon {
+        position: absolute;
+        right: 0px;
       }
     }
   }

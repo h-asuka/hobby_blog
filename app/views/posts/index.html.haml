@@ -11,9 +11,11 @@
       .right-content__signed-in
         .mypage
           マイページ
-        .mypost
-          - @posts.each do |post|
-            = link_to post.title, post_path(post.id), class: "mypost--title"
+        - @posts.each do |post|
+          .postlist
+            .side-image
+            .mypost
+              = link_to post.title, post_path(post.id), class: "mypost--title"
     - else
       .right-content__signed-out
         .register-content

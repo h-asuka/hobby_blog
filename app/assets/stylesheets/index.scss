@@ -23,17 +23,36 @@
   .right-content {
     margin-left: 80px;
     width: 30%;
+    overflow: scroll;
+    height: 100%;
     .right-content__signed-in {
       height: 100%;
       background-color: orange;
+      padding: 10px;
       .mypage {
-
+        text-align: center;
       }
-      .mypost {
-        height: 5%;
-        &--title {
-          height: 100%;
-          display: block;
+      .postlist {
+        display: flex;
+        border-bottom: 1px solid #f6f6f6;
+        .side-image {
+          height: 40px;
+          width: 40px;
+          border: solid 1px;
+          background-color: papayawhip;
+          margin: 5px;
+        }
+        .mypost {
+          height: 40px;
+          margin-left: 20px;
+          &--title {
+            height: 100%;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 40px;
+            text-decoration: none;
+            color:yellow;
+          }
         }
       }
     }

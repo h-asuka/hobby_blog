@@ -7,16 +7,19 @@
     .article-new
       新着記事
   .right-content
-    .register-content
-      - if user_signed_in?
+    - if user_signed_in?
+      .right-content__signed-in
         .mypage
           マイページ
         .mypost
-          投稿一覧
-      - else 
-        .new-register
-          = link_to "新規登録", new_user_registration_path, class: "content-register"
-        .log-in
-          = link_to "ログイン", new_user_session_path, class: "content-login"
-    .advertising
-      ユーザー紹介
+          - @posts.each do |post|
+            = link_to post.title, post_path(post.id), class: "mypost--title"
+    - else
+      .right-content__signed-out
+        .register-content
+          .register-content__new
+            = link_to "新規登録", new_user_registration_path, class: "content-register"
+          .register-content__log-in
+            = link_to "ログイン", new_user_session_path, class: "content-login"
+        .advertising
+          ユーザー紹介

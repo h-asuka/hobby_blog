@@ -23,15 +23,37 @@
   .right-content {
     margin-left: 80px;
     width: 30%;
-    .register-content {
-      height: 35%;
-      
-      background-color: darkorange;
+    .right-content__signed-in {
+      height: 100%;
+      background-color: orange;
+      .mypage {
+
+      }
+      .mypost {
+        height: 5%;
+        &--title {
+          height: 100%;
+          display: block;
+        }
+      }
     }
-    .advertising {
-      margin-top: 65px;
-      height: 55%;
-      background-color: darkorchid;
+    .right-content__signed-out {
+      height: 100%;
+      .register-content {
+        height: 30%;
+        background-color: orange;
+        .new-register {
+
+        }
+        .log-in {
+  
+        }
+      }
+      .advertising {
+        margin-top: 65px;
+        height: 60%;
+        background-color: darkorchid;
+      }
     }
   }
 }

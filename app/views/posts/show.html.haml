@@ -1,0 +1,8 @@
+.details-container
+  .details-content
+    .details-content__title
+      = @post.title 
+    .details-content__time
+      = @post.created_at
+    .details-content__text
+      = simple_format @post.content

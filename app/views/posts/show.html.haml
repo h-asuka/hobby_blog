@@ -1,8 +1,13 @@
+=render 'posts/header'
+
 .details-container
   .details-content
     .details-content__title
       = @post.title 
     .details-content__time
       = @post.created_at
+    .details-content__edit
+      = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
+      = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
     .details-content__text
       = simple_format @post.content

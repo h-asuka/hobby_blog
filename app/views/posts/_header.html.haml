@@ -12,6 +12,8 @@
     .register
       .new-post
         = link_to "新規投稿", new_post_path, class: "header__right--link"
+      .user-name
+        = link_to current_user.nickname, user_path(current_user), class: "header__right--link"
       .log-out
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--link"
   - else

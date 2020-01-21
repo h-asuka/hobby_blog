@@ -42,4 +42,12 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
 
+  #ガード節
+  def not_item_user
+    if @item.user_id != current_user.id 
+      flash[:alert] = "該当ユーザーではありません"
+      redirect_to root_path
+    end 
+  end
+
 end

@@ -7,7 +7,7 @@
     .article-new
       新着記事
   .right-content
-    - if user_signed_in? && current_user.id == @post.user_id
+    - if user_signed_in? #&& current_user.id == @post.user_id
       .right-content__signed-in
         .mypage
           = link_to "マイページ", user_path(current_user), class: "mypage--link"

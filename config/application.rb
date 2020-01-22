@@ -17,5 +17,10 @@ module HobbyBlog
     # the framework and any gems in your application.
 
     config.time_zone = 'Tokyo'
+    config.i18n.default_locale = :ja
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+
+    require 'carrierwave'
+    require 'carrierwave/orm/activerecord'
   end
 end

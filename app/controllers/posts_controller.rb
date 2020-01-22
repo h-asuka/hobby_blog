@@ -43,11 +43,11 @@ class PostsController < ApplicationController
   end
 
   #ガード節
-  def not_item_user
-    if @item.user_id != current_user.id 
-      flash[:alert] = "該当ユーザーではありません"
-      redirect_to root_path
-    end 
-  end
+  # def not_edit_user
+  #   if @post.user_id != current_user.id 
+  #     flash[:alert] = "該当ユーザーではありません"
+  #     redirect_to root_path
+  #   end 
+  # end
 
 end

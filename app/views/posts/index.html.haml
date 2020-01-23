@@ -7,10 +7,23 @@
     .article-new
       新着記事
   .right-content
-    .register-content
-      .new-register
-        = link_to "新規登録", new_user_registration_path, class: "content-register"
-      .log-in
-        = link_to "ログイン", new_user_session_path, class: "content-login"
-    .advertising
-      ユーザー紹介
+    - if user_signed_in?
+      .right-content__signed-in
+        .mypage
+          = link_to "マイページ", user_path(current_user), class: "mypage--link"
+        - @posts.each do |post|
+          .postlist
+            .side-image
+            .mypost
+              = link_to post.title, post_path(post.id), class: "mypost--title"
+            .nickname
+              = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+    - else
+      .right-content__signed-out
+        .register-content
+          .register-content__new
+            = link_to "新規登録", new_user_registration_path, class: "content-register"
+          .register-content__log-in
+            = link_to "ログイン", new_user_session_path, class: "content-login"
+        .advertising
+          ユーザー紹介

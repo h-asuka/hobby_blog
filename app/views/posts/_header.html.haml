@@ -1,9 +1,11 @@
 .main-header
   .title
     = link_to "Blog", root_path, class: "title-link"
+  .search
+    = form_with(url:'#', method: :get, local: true, class: "search__form") do |f|
+      = f.text_field :keyword,class:'search-field',placeholder: '検索'#,value: @keyword
+      = icon('fas', 'search', class: 'search-icon')
   .table-content
-    .header-top
-      トップ
     .header-article
       新着記事
     .header-rank
@@ -12,13 +14,21 @@
     .register
       .new-post
         = link_to "新規投稿", new_post_path, class: "header__right--link"
+      .user-name
+        = link_to current_user.nickname, user_path(current_user), class: "header__right--link"
+      .log-out
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--link"
+      .profile-edit
+        = link_to "プロフィール編集", edit_user_path(current_user.id), class: "userManage__edit"
+      -if current_user.image.present?
+        .profile-photo
+          = image_tag current_user.image.to_s, size: "60x60", class: 'header__icon'
+      -else
+        .profile-photo
+          = image_tag "noimage.jpeg",size: "60x60", class: 'header__icon'
   - else
     .register
       .new-register
         = link_to "新規登録", new_user_registration_path, class: "header__right--link"
       .log-in
         = link_to "ログイン", new_user_session_path, class: "header__right--link"
-  .search
-    = form_with(url:'#', method: :get, local: true, class: "search-form") do |f|
-      = f.text_field :keyword,class:'search-field',placeholder: '検索'#,value: @keyword
-      = icon('fas', 'search', class: 'icon-search')

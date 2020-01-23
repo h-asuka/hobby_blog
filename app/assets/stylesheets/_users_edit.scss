@@ -1,0 +1,11 @@
+.profile-container {
+  height: calc(100vh - 80px);;
+  background-color: #FFFFEE;
+  padding: 40px;
+  .profile-content {
+    width: 70%;
+    height: 90%;
+    background-color: #FFEEFF;
+    margin: 0 auto;
+  }
+}

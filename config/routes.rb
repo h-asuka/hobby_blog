@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  resources :posts, only: [:new, :create]
+  resources :posts, except: :index
+  resources :users, only: [:show, :edit, :update]
 end

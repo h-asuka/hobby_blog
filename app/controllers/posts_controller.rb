@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    if user_signed_in?
+      @posts = current_user.posts.includes(:user)
+    else
+      @posts = Post.includes(:user)
+    end
   end
 
   def new
@@ -8,14 +12,46 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to post_path(post.id)
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
     redirect_to root_path
   end
 
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
   end
+
+  #ガード節
+  # def not_edit_user
+  #   if @post.user_id != current_user.id 
+  #     flash[:alert] = "該当ユーザーではありません"
+  #     redirect_to root_path
+  #   end 
+  # end
 
 end

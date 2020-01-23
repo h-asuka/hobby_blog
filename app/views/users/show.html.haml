@@ -1,1 +1,14 @@
 =render 'posts/header'
+
+.user-details-container
+  .user-details-content
+    .user-details-content__profile
+      -if current_user.image.present?
+        .user-details-content__profile__image
+          = image_tag current_user.image.to_s, size: "150x150", class: 'mypage__icon'
+      - else
+        .user-details-content__profile__image
+          = image_tag "noimage.jpeg",size: "150x150", class: 'mypage__icon'
+      .user-details-content__profile__name
+        = current_user.nickname
+    .user-details-content__

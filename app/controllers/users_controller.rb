@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      binding.pry
       flash[:notice] = "変更を保存しました"
       redirect_to user_path(current_user)
     else

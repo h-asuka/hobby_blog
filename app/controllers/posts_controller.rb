@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = current_user.posts.includes(:user)
+    if user_signed_in?
+      @posts = current_user.posts.includes(:user)
+    else
+      @posts = Post.includes(:user)
+    end
   end
 
   def new

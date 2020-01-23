@@ -6,10 +6,10 @@
       プロフィールの編集
     .profile__right__content__edit
       = form_with model: @user, local: true do |f|
-        = f.label :avatar_image, class: "file", id: 'user_img' do
-          -if @user.avatar_image.present?
+        = f.label :image, class: "file", id: 'user_img' do
+          -if @user.image.present?
             .profile-content__edit__view-box
-              = image_tag @user.avatar_image.to_s, alt: "プロフィール画像",size: "60x60", class: 'mypage__icon', id: :img_prev
+              = image_tag @user.image.to_s, alt: "プロフィール画像",size: "60x60", class: 'mypage__icon', id: :img_prev
             .profile-content__edit__nickname
               = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
             .profile-content__edit__email
@@ -33,7 +33,7 @@
             .profile-content__edit__password-confirmation
               = f.password_field :password_confirmation
               新しいパスワード確認
-          = f.file_field :avatar_image,class: 'file'
+          = f.file_field :image,class: 'file'
           .profile__right__content__bottom
             .profile__right__content__profile
               = f.submit '変更する', class: 'profile__right__input__send'

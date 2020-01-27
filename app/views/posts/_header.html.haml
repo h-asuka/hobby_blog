@@ -25,7 +25,7 @@
           = image_tag current_user.image.to_s, size: "60x60", class: 'header__icon'
       -else
         .profile-photo
-          = image_tag "ダウンロード.jpeg",size: "60x60", class: 'header__icon'
+          -# = image_tag "noimage.jpeg",size: "60x60", class: 'header__icon'
   - else
     .register
       .new-register

@@ -22,7 +22,7 @@
               新しいパスワード確認
           -else 
             .profile-content__edit__view-box
-              = image_tag asset_path "noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
+              -# = image_tag asset_path "noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
             .profile-content__edit__nickname
               = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
             .profile-content__edit__email

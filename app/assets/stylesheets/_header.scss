@@ -2,9 +2,9 @@
   height: 80px;
   display: flex;
   justify-content: space-between;
-  background-color: green;
+  background-color: #CBFFD3;
   .title {
-
+    text-decoration: none;
   }
   .table-content {
     display: flex;
@@ -22,13 +22,25 @@
     justify-content: space-between;
     width: 40%;
     .new-post {
-
+      text-decoration: none;
+    }
+    .log-out {
+      text-decoration: none;
+    }
+    .user-name {
+      text-decoration: none;
+    }
+    .profile-edit {
+      text-decoration: none;
+    }
+    .profile-photo {
+      text-decoration: none;
     }
     .new-register {
-
+      text-decoration: none;
     }
     .log-in {
-
+      text-decoration: none;
     }
   }
   .search {

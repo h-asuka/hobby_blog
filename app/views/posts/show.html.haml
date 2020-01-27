@@ -12,3 +12,18 @@
         = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
     .details-content__text
       = simple_format @post.content
+    .details-content__like-count
+      いいね件数:
+      = @post.likes.count
+    .details-content__like
+      - if current_user.already_liked?(@post)
+        .details-content__like__delite
+          = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
+      -else
+        .details-content__like__addition
+          = button_to 'いいね', post_likes_path(@post)
+    .details-content__like__user
+      いいねしたユーザー
+    .details-content__like__user-count
+      - @post.liked_users.each do |user|
+        = user.nickname

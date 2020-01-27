@@ -11,4 +11,31 @@
           -# = image_tag asset_path "noimage.jpeg",size: "150x150", class: 'mypage__icon'
       .user-details-content__profile__name
         = current_user.nickname
-    .user-details-content__
+    .user-details-content__right
+      .user-details-content__right__top
+        .user-details-content__right__top__post
+          = current_user.nickname
+          さんの投稿
+        .user-details-content__right__top__like
+          いいねしている投稿
+        .user-details-content__right__top__following
+          フォロー
+        .user-details-content__right__top__followers
+          フォロワー
+      .user-details-content__right__content
+        .user-details-content__right__content__post
+          - @posts.each do |post|
+            .postlist
+              .side-image
+              .mypost
+                = link_to post.title, post_path(post.id), class: "mypost--title"
+        .user-details-content__right__content__like
+          - @user.liked_posts.each do |post|
+            .postlist
+              .side-image
+              .likepost
+                = link_to post.title, post_path(post.id), class: "likepost--title"
+        .user-details-content__right__content__following
+          (仮)
+        .user-details-content__right__content__followers
+          (仮)

@@ -1,6 +1,6 @@
 .main-header
   .title
-    = link_to "Blog", root_path, class: "title-link"
+    = link_to "Blog", root_path, class: "title"
   .search
     = form_with(url:'#', method: :get, local: true, class: "search__form") do |f|
       = f.text_field :keyword,class:'search-field',placeholder: '検索'#,value: @keyword
@@ -9,26 +9,26 @@
     .header-article
       新着記事
     .header-rank
-      ランキング
+      人気の記事
   - if user_signed_in?
     .register
       .new-post
-        = link_to "新規投稿", new_post_path, class: "header__right--link"
+        = link_to "新規投稿", new_post_path, class: "new-post"
       .user-name
-        = link_to current_user.nickname, user_path(current_user), class: "header__right--link"
+        = link_to current_user.nickname, user_path(current_user), class: "user-name"
       .log-out
-        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--link"
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-out"
       .profile-edit
-        = link_to "プロフィール編集", edit_user_path(current_user.id), class: "userManage__edit"
+        = link_to "プロフィール編集", edit_user_path(current_user.id), class: "profile-edit"
       -if current_user.image.present?
         .profile-photo
-          = image_tag current_user.image.to_s, size: "60x60", class: 'header__icon'
+          = image_tag current_user.image.to_s, size: "60x60", class: 'profile-photo'
       -else
         .profile-photo
           -# = image_tag "noimage.jpeg",size: "60x60", class: 'header__icon'
   - else
     .register
       .new-register
-        = link_to "新規登録", new_user_registration_path, class: "header__right--link"
+        = link_to "新規登録", new_user_registration_path, class: "new-register"
       .log-in
-        = link_to "ログイン", new_user_session_path, class: "header__right--link"
+        = link_to "ログイン", new_user_session_path, class: "log-in"

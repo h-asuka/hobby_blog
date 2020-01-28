@@ -2,33 +2,53 @@
   height: 80px;
   display: flex;
   justify-content: space-between;
-  background-color: green;
+  background-color:white;
+  border-bottom: 1px solid #EEEEEE;
   .title {
-
+    text-decoration: none;
+    color: black;
   }
-  .table-content {
-    display: flex;
-    justify-content: space-between;
-    width: 20%;
-    .header-article {
+  // .table-content {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   width: 20%;
+  //   .header-article {
 
-    }
-    .header-rank {
+  //   }
+  //   .header-rank {
 
-    }
-  }
+  //   }
+  // }
   .register {
     display: flex;
     justify-content: space-between;
     width: 40%;
     .new-post {
-
+      text-decoration: none;
+      color: black;
+    }
+    .log-out {
+      text-decoration: none;
+      color: black;
+    }
+    .user-name {
+      text-decoration: none;
+      color: black;
+    }
+    .profile-edit {
+      text-decoration: none;
+      color: black;
+    }
+    .profile-photo {
+      text-decoration: none;
     }
     .new-register {
-
+      text-decoration: none;
+      color: black;
     }
     .log-in {
-
+      text-decoration: none;
+      color: black;
     }
   }
   .search {

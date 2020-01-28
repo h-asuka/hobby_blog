@@ -3,9 +3,23 @@
 .main-container
   .slick-content
     .article-rank
-      ランキング
+      人気の記事
+      - @all_ranks.each do |post|
+        .postlist
+          .side-image
+          .mypost
+            = link_to post.title, post_path(post.id), class: "mypost--title"
+          .nickname
+            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
     .article-new
       新着記事
+      - @new_posts.each do |post|
+        .postlist
+          .side-image
+          .mypost
+            = link_to post.title, post_path(post.id), class: "mypost--title"
+          .nickname
+            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
   .right-content
     - if user_signed_in?
       .right-content__signed-in

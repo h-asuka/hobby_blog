@@ -1,6 +1,6 @@
 .user-details-container {
   height: calc(100vh - 80px);;
-  background-color: #FFFFAA;
+  background-color: white;
   .user-details-content {
     height: 100%;
     display: flex;
@@ -24,31 +24,31 @@
       &__top {
         height: 10%;
         display: flex;
-        background-color: #EDFFBE;
+        background-color: white;
         text-align: center;
         &__post {
           width: 25%;
           line-height: 72.69px;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 0px 2px;
 
         }
         &__like {
           width: 25%;
           line-height: 72.69px;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 0px 0px;
         }
         &__following {
           width: 25%;
           line-height: 72.69px;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 0px 0px;
         }
         &__followers {
           width: 25%;
           line-height: 72.69px;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 0px 0px;
         }
       }
@@ -59,7 +59,7 @@
         &__post {
           width: 25%;
           overflow: auto;
-          border: groove 2px #8EB8FF;
+          border: solid 2px #EEEEEE;
           padding: 20px;
           .postlist {
             display: flex;
@@ -94,7 +94,7 @@
         &__like {
           width: 25%;
           overflow: auto;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
           padding: 20px;
           .postlist {
@@ -129,13 +129,13 @@
         }
         &__following {
           width: 25%;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
           padding: 20px;
         }
         &__followers {
           width: 25%;
-          border: groove #8EB8FF;
+          border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
           padding: 20px;
         }

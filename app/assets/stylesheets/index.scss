@@ -4,43 +4,140 @@
 
 
 .main-container {
-  background-color: blue;
+  background-color: white;
   height: calc(100vh - 80px);
   padding: 50px;
   display: flex;
   .slick-content {
-    width: 60%;
+    width: 80%;
+    display: flex;
     .article-rank {
-      height: 45%;
-      background-color: white;
-    }
-    .article-new {
-      height: 45%;
-      background-color: cyan;
-      margin-top: 65px;
-    }
-  }
-  .right-content {
-    margin-left: 80px;
-    width: 30%;
-    .right-content__signed-in {
-      height: 100%;
-      background-color: orange;
+      width: 45%;
+      background-color: #D8DCE9;
+      text-align: center;
       padding: 10px;
       overflow: auto;
-      .mypage {
-        text-align: center;
-      }
+      border-radius: 1%;
       .postlist {
-        background-color: orange;
+        background-color: #D8DCE9;
         display: flex;
         border-bottom: 1px solid #f6f6f6;
-        
         .side-image {
           height: 40px;
           width: 40px;
           border: solid 1px;
-          background-color: papayawhip;
+          background-color: #E7D0C6;
+          margin: 5px;
+        }
+      }
+      .mypost {
+        height: 100%;
+        margin-left: 20px;
+        width: 40%;
+        &--title {
+          height: 40px;
+          width: 152.8px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 40px;
+          text-decoration: none;
+          color: #0A0661;
+          overflow-x: auto;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+      .nickname {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        margin-left: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: block;
+        .user-nickname {
+          text-decoration: none;
+          color: #0A0661;
+        }
+      }
+    }
+    .article-new {
+      width: 45%;
+      margin-left: 50px;
+      background-color: #D8DCE9;
+      text-align: center;
+      padding: 10px;
+      overflow: auto;
+      border-radius: 1%;
+      .postlist {
+        background-color: #D8DCE9;
+        display: flex;
+        border-bottom: 1px solid #f6f6f6;
+        .side-image {
+          height: 40px;
+          width: 40px;
+          border: solid 1px;
+          background-color: #E7D0C6;
+          margin: 5px;
+        }
+      }
+      .mypost {
+        height: 100%;
+        margin-left: 20px;
+        width: 40%;
+        &--title {
+          height: 40px;
+          width: 152.8px;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 40px;
+          text-decoration: none;
+          color: #0A0661;
+          overflow-x: auto;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+      .nickname {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        margin-left: 10px;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: block;
+        .user-nickname {
+          text-decoration: none;
+          color: #0A0661;
+        }
+      }
+    }
+  }
+  .right-content {
+    margin-left: 50px;
+    width: 30%;
+    .right-content__signed-in {
+      height: 100%;
+      background-color: #D8DCE9;
+      padding: 10px;
+      overflow: auto;
+      border-radius: 1%;
+      .mypage {
+        text-align: center;
+        .mypage--link {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      .postlist {
+        background-color: #D8DCE9;
+        display: flex;
+        border-bottom: 1px solid #f6f6f6;
+        .side-image {
+          height: 40px;
+          width: 40px;
+          border: solid 1px;
+          background-color: #E7D0C6;
           margin: 5px;
         }
         .mypost {
@@ -54,7 +151,7 @@
             font-weight: 400;
             line-height: 40px;
             text-decoration: none;
-            color:yellow;
+            color: #0A0661;
             overflow-x: auto;
             white-space: nowrap;
             display: block;
@@ -68,6 +165,10 @@
           overflow-x: auto;
           white-space: nowrap;
           display: block;
+          .user-nickname {
+            text-decoration: none;
+            color: #0A0661;
+          }
         }
       }
     }

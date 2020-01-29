@@ -7,26 +7,62 @@
     height: 90%;
     background-color: #D8DCE9;
     margin: 0 auto;
-
+    text-align: center;
     &__top {
-
+      font-size: 25px;
+      height: 10%;
     }
     &__edit {
+      height: 90%;
+      &__image {
 
-      &__view-box {
-        // height: 100px;
-        // width: 100px;
-        // background-image:url(noimage.jpeg);
-        // background-repeat: no-repeat;
-        // background-size: contain;
-        // color: white;
         .file {
-          height: 100px;
-          width: 100px;
+          display: none;
+        }
+        .edit-icon {
+
         }
       }
       &__nickname {
-        height: 50px;
+        margin-top: 10px;
+        height: 40px;
+        .edit-nickname {
+          height: 40px;
+          font-size: 17px;
+          padding: 10px;
+        }
+      }
+      &__email {
+        margin-top: 10px;
+        height: 40px;
+        .edit-email {
+          height: 40px;
+          font-size: 17px;
+          padding: 10px;
+        }
+      }
+      &__password {
+        margin-top: 10px;
+        height: 40px;
+        .edit-password {
+          height: 40px;
+          font-size: 17px;
+          padding: 10px;
+        }
+      }
+      &__password-confirmation {
+        margin-top: 10px;
+        height: 40px;
+        .edit-password-confirmation {
+          height: 40px;
+          font-size: 17px;
+          padding: 10px;
+        }
+      }
+      &__bottom {
+        margin-top: 10px;
+        .edit-send {
+        }
       }
     }
   }

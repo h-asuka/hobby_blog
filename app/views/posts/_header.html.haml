@@ -2,9 +2,9 @@
   .title
     = link_to "Blog", root_path, class: "title"
   .search
-    = form_with(url:'#', method: :get, local: true, class: "search__form") do |f|
-      = f.text_field :keyword,class:'search-field',placeholder: '検索'#,value: @keyword
-      = icon('fas', 'search', class: 'search-icon')
+    -# = form_with(url:'#', method: :get, local: true, class: "search__form") do |f|
+    -#   = f.text_field :keyword,class:'search-field',placeholder: '検索'#,value: @keyword
+    -#   = icon('fas', 'search', class: 'search-icon')
   -# .table-content
   -#   .header-article
   -#     新着記事
@@ -25,6 +25,7 @@
           = image_tag current_user.image.to_s, size: "60x60", class: 'profile-photo'
       -else
         .profile-photo
+          = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
   - else
     .register
       .new-register

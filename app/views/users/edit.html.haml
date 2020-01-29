@@ -4,39 +4,40 @@
   .profile-content
     .profile-content__top
       プロフィールの編集
-    .profile__right__content__edit
+    .profile-content__edit
       = form_with model: @user, local: true do |f|
-        = f.label :image, class: "file", id: 'user_img' do
-          -if @user.image.present?
+        -if @user.image.present?
+          = f.label :image, class: "file", id: 'user_img' do
             .profile-content__edit__view-box
               = image_tag @user.image.to_s, alt: "プロフィール画像",size: "60x60", class: 'mypage__icon', id: :img_prev
-            .profile-content__edit__nickname
-              = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
-            .profile-content__edit__email
-              = f.email_field :email, class: 'profile__right__input__email'
-            .profile-content__edit__password
-              = f.password_field :password
-              新しいパスワード
-            .profile-content__edit__password-confirmation
-              = f.password_field :password_confirmation
-              新しいパスワード確認
-          -else 
-            .profile-content__edit__view-box
-              -# = image_tag "noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
-            .profile-content__edit__nickname
-              = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
-            .profile-content__edit__email
-              = f.email_field :email, class: 'profile__right__input__email'
-            .profile-content__edit__password
-              = f.password_field :password
-              新しいパスワード
-            .profile-content__edit__password-confirmation
-              = f.password_field :password_confirmation
-              新しいパスワード確認
-          = f.file_field :image,class: 'file'
-          .profile__right__content__bottom
-            .profile__right__content__profile
-              = f.submit '変更する', class: 'profile__right__input__send'
+          .profile-content__edit__nickname
+            = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
+          .profile-content__edit__email
+            = f.email_field :email, class: 'profile__right__input__email'
+          .profile-content__edit__password
+            = f.password_field :password
+            新しいパスワード
+          .profile-content__edit__password-confirmation
+            = f.password_field :password_confirmation
+            新しいパスワード確認
+        -else
+          .profile-content__edit__view-box
+            = f.label :image, class: "file", id: 'user_img' do
+              = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
+          .profile-content__edit__nickname
+            = f.text_field :nickname, class: 'profile__right__input__nickname',value: @user.nickname
+          .profile-content__edit__email
+            = f.email_field :email, class: 'profile__right__input__email'
+          .profile-content__edit__password
+            = f.password_field :password
+            新しいパスワード
+          .profile-content__edit__password-confirmation
+            = f.password_field :password_confirmation
+            新しいパスワード確認
+        = f.file_field :image,class: 'file'
+        .profile__right__content__bottom
+          .profile__right__content__profile
+            = f.submit '変更する', class: 'profile__right__input__send'
 
       
     

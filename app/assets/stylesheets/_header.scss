@@ -41,6 +41,11 @@
     }
     .profile-photo {
       text-decoration: none;
+      width: 60px;
+      height: 60px;
+      background-image:url(noimage.jpeg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     .new-register {
       text-decoration: none;

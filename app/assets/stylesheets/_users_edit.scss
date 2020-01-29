@@ -7,5 +7,27 @@
     height: 90%;
     background-color: #D8DCE9;
     margin: 0 auto;
+
+    &__top {
+
+    }
+    &__edit {
+
+      &__view-box {
+        // height: 100px;
+        // width: 100px;
+        // background-image:url(noimage.jpeg);
+        // background-repeat: no-repeat;
+        // background-size: contain;
+        // color: white;
+        .file {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      &__nickname {
+        height: 50px;
+      }
+    }
   }
 }

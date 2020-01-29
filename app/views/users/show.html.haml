@@ -5,12 +5,12 @@
     .user-details-content__profile
       -if current_user.image.present?
         .user-details-content__profile__image
-          = image_tag current_user.image.to_s, size: "150x150", class: 'mypage__icon'
+          = image_tag @user.image.to_s, size: "150x150", class: 'mypage__icon'
       - else
         .user-details-content__profile__image
           = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "150x150", class: 'mypage__icon'
       .user-details-content__profile__name
-        = current_user.nickname
+        = @user.nickname
     .user-details-content__right
       .user-details-content__right__top
         .user-details-content__right__top__post

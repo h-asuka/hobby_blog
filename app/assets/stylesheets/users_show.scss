@@ -22,33 +22,42 @@
       height: 100%;
       &__top {
         height: 10%;
-        display: flex;
         background-color: white;
         text-align: center;
-        &__post {
-          width: 25%;
-          line-height: 72.69px;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 0px 2px;
-
-        }
-        &__like {
-          width: 25%;
-          line-height: 72.69px;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 0px 0px;
-        }
-        &__following {
-          width: 25%;
-          line-height: 72.69px;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 0px 0px;
-        }
-        &__followers {
-          width: 25%;
-          line-height: 72.69px;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 0px 0px;
+        &__button {
+          display: flex;
+          &__post {
+            width: 25%;
+            line-height: 72.69px;
+            border: solid #EEEEEE;
+            border-width: 2px 2px 0px 2px;
+            .btn-default {
+              display: flex;
+              text-decoration: none;
+              .user-nickname {
+              }
+              .user-posts {
+              }
+            }
+          }
+          &__like {
+            width: 25%;
+            line-height: 72.69px;
+            border: solid #EEEEEE;
+            border-width: 2px 2px 0px 0px;
+          }
+          &__following {
+            width: 25%;
+            line-height: 72.69px;
+            border: solid #EEEEEE;
+            border-width: 2px 2px 0px 0px;
+          }
+          &__followers {
+            width: 25%;
+            line-height: 72.69px;
+            border: solid #EEEEEE;
+            border-width: 2px 2px 0px 0px;
+          }
         }
       }
       &__content {
@@ -60,35 +69,6 @@
           overflow: auto;
           border: solid 2px #EEEEEE;
           padding: 20px;
-          .postlist {
-            display: flex;
-            border-bottom: 2px solid #f6f6f6;
-            
-            .side-image {
-              height: 40px;
-              width: 40px;
-              border: solid 1px;
-              background-color: papayawhip;
-              margin: 5px;
-            }
-            .mypost {
-              height: 100%;
-              width: 144px;
-              &--title {
-                height: 50px;
-                width: 144px;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 50px;
-                text-decoration: none;
-                color:black;
-                overflow-x: auto;
-                white-space: nowrap;
-                display: block;
-                margin-left: 20px;
-              }
-            }
-          }
         }
         &__like {
           width: 25%;
@@ -96,35 +76,6 @@
           border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
           padding: 20px;
-          .postlist {
-            display: flex;
-            border-bottom: 2px solid #f6f6f6;
-            
-            .side-image {
-              height: 40px;
-              width: 40px;
-              border: solid 1px;
-              background-color: papayawhip;
-              margin: 5px;
-            }
-            .likepost {
-              height: 100%;
-              margin-left: 20px;
-              width: 40%;
-              &--title {
-                height: 40px;
-                width: 152.8px;
-                font-size: 18px;
-                font-weight: 400;
-                line-height: 40px;
-                text-decoration: none;
-                color:black;
-                overflow-x: auto;
-                white-space: nowrap;
-                display: block;
-              }
-            }
-          }
         }
         &__following {
           width: 25%;
@@ -139,6 +90,41 @@
           padding: 20px;
         }
       }
+    }
+  }
+}
+
+.btn-default {
+  text-decoration: none;
+  color: black;
+}
+
+.show-postlist {
+  display: flex;
+  border-bottom: 2px solid #f6f6f6;
+  
+  .showside-image {
+    height: 40px;
+    width: 40px;
+    border: solid 1px;
+    background-color: papayawhip;
+    margin: 5px;
+  }
+  .showpost {
+    height: 100%;
+    width: 144px;
+    &--title {
+      height: 50px;
+      width: 144px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 50px;
+      text-decoration: none;
+      color:black;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: block;
+      margin-left: 20px;
     }
   }
 }

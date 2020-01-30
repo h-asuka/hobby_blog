@@ -15,28 +15,35 @@
         = render 'relationships/follow_button', user: @user
     .user-details-content__right
       .user-details-content__right__top
-        .user-details-content__right__top__post
-          = @user.nickname
-          さんの投稿
-        .user-details-content__right__top__like
-          いいねしている投稿
-        .user-details-content__right__top__following
-          フォロー
-        .user-details-content__right__top__followers
-          フォロワー
+        .user-details-content__right__top__button
+          .user-details-content__right__top__button__post
+            = link_to user_path(@user), class: 'btn btn-default' do
+              .user-nickname
+                = @user.nickname
+              .user-post
+                さんの投稿
+          .user-details-content__right__top__button__like
+            = link_to root_path, class: 'btn btn-default' do
+              %h1 いいねした投稿
+          .user-details-content__right__top__button__following
+            = link_to root_path, class: 'btn btn-default' do
+              %h1 フォロー
+          .user-details-content__right__top__button__followers
+            = link_to root_path, class: 'btn btn-default' do
+              %h1フォロワー
       .user-details-content__right__content
         .user-details-content__right__content__post
           - @posts.each do |post|
-            .postlist
-              .side-image
-              .mypost
-                = link_to post.title, post_path(post.id), class: "mypost--title"
+            .show-postlist
+              .showside-image
+              .showpost
+                = link_to post.title, post_path(post.id), class: "showpost--title"
         .user-details-content__right__content__like
           - @user.liked_posts.each do |post|
-            .postlist
-              .side-image
-              .likepost
-                = link_to post.title, post_path(post.id), class: "likepost--title"
+            .show-postlist
+              .showside-image
+              .showpost
+                = link_to post.title, post_path(post.id), class: "showpost--title"
         .user-details-content__right__content__following
           (仮)
         .user-details-content__right__content__followers

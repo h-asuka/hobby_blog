@@ -20,31 +20,36 @@
             = link_to user_path(@user), class: 'btn btn-default' do
               .user-nickname
                 = @user.nickname
-              .user-post
                 さんの投稿
           .user-details-content__right__top__button__like
-            = link_to root_path, class: 'btn btn-default' do
+            = link_to favorites_user_path, class: 'btn btn-default' do
               %h1 いいねした投稿
           .user-details-content__right__top__button__following
-            = link_to root_path, class: 'btn btn-default' do
+            = link_to followings_user_path, class: 'btn btn-default' do
               %h1 フォロー
           .user-details-content__right__top__button__followers
-            = link_to root_path, class: 'btn btn-default' do
-              %h1フォロワー
+            = link_to followers_user_path, class: 'btn btn-default' do
+              %h1 フォロワー
       .user-details-content__right__content
-        .user-details-content__right__content__post
+        .user-details-content__right__content__top
+          = @user.nickname
+          さんの投稿
+        .user-details-content__right__content__center
           - @posts.each do |post|
             .show-postlist
               .showside-image
               .showpost
                 = link_to post.title, post_path(post.id), class: "showpost--title"
-        .user-details-content__right__content__like
-          - @user.liked_posts.each do |post|
-            .show-postlist
-              .showside-image
-              .showpost
-                = link_to post.title, post_path(post.id), class: "showpost--title"
-        .user-details-content__right__content__following
-          (仮)
-        .user-details-content__right__content__followers
-          (仮)
+
+
+
+        -# .user-details-content__right__content__like
+        -#   - @user.liked_posts.each do |post|
+        -#     .show-postlist
+        -#       .showside-image
+        -#       .showpost
+        -#         = link_to post.title, post_path(post.id), class: "showpost--title"
+        -# .user-details-content__right__content__following
+        -#   (仮)
+        -# .user-details-content__right__content__followers
+        -#   (仮)

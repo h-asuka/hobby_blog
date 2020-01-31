@@ -30,13 +30,12 @@
             width: 25%;
             line-height: 72.69px;
             border: solid #EEEEEE;
-            border-width: 2px 2px 0px 2px;
+            border-width: 2px 2px 2px 2px;
             .btn-default {
               display: flex;
               text-decoration: none;
               .user-nickname {
-              }
-              .user-posts {
+                width: 100%;
               }
             }
           }
@@ -44,51 +43,64 @@
             width: 25%;
             line-height: 72.69px;
             border: solid #EEEEEE;
-            border-width: 2px 2px 0px 0px;
+            border-width: 2px 2px 2px 0px;
           }
           &__following {
             width: 25%;
             line-height: 72.69px;
             border: solid #EEEEEE;
-            border-width: 2px 2px 0px 0px;
+            border-width: 2px 2px 2px 0px;
           }
           &__followers {
             width: 25%;
             line-height: 72.69px;
             border: solid #EEEEEE;
-            border-width: 2px 2px 0px 0px;
+            border-width: 2px 2px 2px 0px;
           }
         }
       }
       &__content {
         height: 90%;
-        display: flex;
-
-        &__post {
-          width: 25%;
+        border: solid #EEEEEE;
+        border-width: 0px 2px 2px 2px;
+        padding: 20px;
+        &__top {
+          width: 35%;
+          height: 10%;
+          font-size: 25px;
+          border-bottom: 2px solid #EEEEEE;
+          margin: 0 auto;
+          text-align: center;
+        }
+        &__center {
+          height: 90%;
+          margin-top: 20px;
           overflow: auto;
-          border: solid 2px #EEEEEE;
-          padding: 20px;
         }
-        &__like {
-          width: 25%;
-          overflow: auto;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 2px 0px;
-          padding: 20px;
-        }
-        &__following {
-          width: 25%;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 2px 0px;
-          padding: 20px;
-        }
-        &__followers {
-          width: 25%;
-          border: solid #EEEEEE;
-          border-width: 2px 2px 2px 0px;
-          padding: 20px;
-        }
+        // &__post {
+        //   width: 25%;
+        //   overflow: auto;
+        //   padding: 20px;
+        // }
+        // &__like {
+        //   width: 25%;
+        //   overflow: auto;
+        //   border: solid #EEEEEE;
+        //   border-width: 2px 2px 2px 0px;
+        //   padding: 20px;
+        // }
+        // &__following {
+        //   width: 25%;
+        //   border: solid #EEEEEE;
+        //   border-width: 2px 2px 2px 0px;
+        //   padding: 20px;
+        // }
+        // &__followers {
+        //   width: 25%;
+        //   border: solid #EEEEEE;
+        //   border-width: 2px 2px 2px 0px;
+        //   padding: 20px;
+        // }
       }
     }
   }
@@ -102,7 +114,7 @@
 .show-postlist {
   display: flex;
   border-bottom: 2px solid #f6f6f6;
-  
+  height: 30%;
   .showside-image {
     height: 40px;
     width: 40px;

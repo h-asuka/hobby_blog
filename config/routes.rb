@@ -7,5 +7,12 @@ Rails.application.routes.draw do
   resources :posts, except: :index do
     resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    member do
+      get :favorites
+      get :followings
+      get :followers
+    end
+  end
+  resources :relationships, only: [:create, :destroy]
 end

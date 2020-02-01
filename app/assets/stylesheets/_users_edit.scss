@@ -26,38 +26,18 @@
       &__nickname {
         margin-top: 10px;
         height: 40px;
-        .edit-nickname {
-          height: 40px;
-          font-size: 17px;
-          padding: 10px;
-        }
       }
       &__email {
         margin-top: 10px;
         height: 40px;
-        .edit-email {
-          height: 40px;
-          font-size: 17px;
-          padding: 10px;
-        }
       }
       &__password {
         margin-top: 10px;
         height: 40px;
-        .edit-password {
-          height: 40px;
-          font-size: 17px;
-          padding: 10px;
-        }
       }
       &__password-confirmation {
         margin-top: 10px;
         height: 40px;
-        .edit-password-confirmation {
-          height: 40px;
-          font-size: 17px;
-          padding: 10px;
-        }
       }
       &__bottom {
         margin-top: 10px;
@@ -66,4 +46,9 @@
       }
     }
   }
+}
+.edit {
+  height: 40px;
+  font-size: 17px;
+  padding: 10px;
 }

@@ -7,8 +7,8 @@
       - @all_ranks.each do |post|
         .postlist
           .side-image
-          .mypost
-            = link_to post.title, post_path(post.id), class: "mypost--title"
+          .post
+            = link_to post.title, post_path(post.id), class: "post--title"
           .nickname
             = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
     .article-new
@@ -16,8 +16,8 @@
       - @new_posts.each do |post|
         .postlist
           .side-image
-          .mypost
-            = link_to post.title, post_path(post.id), class: "mypost--title"
+          .post
+            = link_to post.title, post_path(post.id), class: "post--title"
           .nickname
             = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
   .right-content
@@ -26,8 +26,8 @@
         .mypage
           = link_to "マイページ", user_path(current_user), class: "mypage--link"
         - @posts.each do |post|
-          .postlist
-            .side-image
+          .my-postlist
+            .myside-image
             .mypost
               = link_to post.title, post_path(post.id), class: "mypost--title"
             .nickname

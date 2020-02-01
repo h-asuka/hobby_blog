@@ -12,16 +12,16 @@
               = image_tag @user.image.to_s, alt: "プロフィール画像",size: "80x80", class: 'edit-icon'
               = f.file_field :image ,class: 'file'
           .profile-content__edit__nickname
-            = f.text_field :nickname, class: 'edit-nickname',value: @user.nickname
+            = f.text_field :nickname, class: 'edit',value: @user.nickname
             新しいニックネーム
           .profile-content__edit__email
-            = f.email_field :email, class: 'edit-email'
+            = f.email_field :email, class: 'edit'
             新しいメールアドレス
           .profile-content__edit__password
-            = f.password_field :password, class: 'edit-password'
+            = f.password_field :password, class: 'edit'
             新しいパスワード
           .profile-content__edit__password-confirmation
-            = f.password_field :password_confirmation, class: 'password_confirmation'
+            = f.password_field :password_confirmation, class: 'edit'
             新しいパスワード確認
         -else
           .profile-content__edit__image
@@ -29,16 +29,16 @@
               = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "80x80", class: 'edit-icon'
               = f.file_field :image ,class: 'file'
           .profile-content__edit__nickname
-            = f.text_field :nickname, class: 'edit-nickname',value: @user.nickname
+            = f.text_field :nickname, class: 'edit',value: @user.nickname
             新しいニックネーム
           .profile-content__edit__email
-            = f.email_field :email, class: 'edit-email'
+            = f.email_field :email, class: 'edit'
             新しいメールアドレス
           .profile-content__edit__password
-            = f.password_field :password, class: 'edit-password'
+            = f.password_field :password, class: 'edit'
             新しいパスワード
           .profile-content__edit__password-confirmation
-            = f.password_field :password_confirmation, class: 'edit-password-confirmation'
+            = f.password_field :password_confirmation, class: 'edit'
             新しいパスワード確認
         .profile-content__edit__bottom
           = f.submit '変更する', class: 'edit-send'

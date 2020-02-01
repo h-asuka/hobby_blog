@@ -18,6 +18,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def favorites
+    @user = User.find(params[:id])
+    @posts = @user.posts
+  end
+
+  def followings
+    @user = User.find(params[:id])
+    @posts = @user.posts
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @posts = @user.posts
+  end
+
   private
 
   def user_params

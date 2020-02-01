@@ -18,9 +18,7 @@
         .user-details-content__right__top__button
           .user-details-content__right__top__button__post
             = link_to user_path(@user), class: 'btn btn-default' do
-              .user-nickname
-                = @user.nickname
-                さんの投稿
+              %h1 投稿
           .user-details-content__right__top__button__like
             = link_to favorites_user_path, class: 'btn btn-default' do
               %h1 いいねした投稿
@@ -32,14 +30,28 @@
               %h1 フォロワー
       .user-details-content__right__content
         .user-details-content__right__content__top
-          = @user.nickname
-          さんの投稿
+          %h2 投稿
         .user-details-content__right__content__center
           - @posts.each do |post|
             .show-postlist
-              .showside-image
+              .showside-photo
+                -if current_user.image.present?
+                  = image_tag @user.image.to_s, size: "120x120", class: 'mypage__icon'
+                - else
+                  = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "120x120", class: 'mypage__icon'
               .showpost
                 = link_to post.title, post_path(post.id), class: "showpost--title"
+              .showlike
+                .showlike__count
+                  いいね件数:
+                  = post.likes.count
+                .showlike__form
+                  - if current_user.already_liked?(post)
+                    .showlike__form__delite
+                      = button_to 'いいねを取り消す', post_like_path(post), method: :delete
+                  -else
+                    .showlike__form__addition
+                      = button_to 'いいね', post_likes_path(post)
 
 
 

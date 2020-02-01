@@ -1,5 +1,3 @@
-=render 'posts/header'
-
 .user-details-container
   .user-details-content
     .user-details-content__profile
@@ -18,7 +16,9 @@
         .user-details-content__right__top__button
           .user-details-content__right__top__button__post
             = link_to user_path(@user), class: 'btn btn-default' do
-              %h1 投稿
+              .user-nickname
+                = @user.nickname
+                さんの投稿
           .user-details-content__right__top__button__like
             = link_to favorites_user_path, class: 'btn btn-default' do
               %h1 いいねした投稿
@@ -28,8 +28,3 @@
           .user-details-content__right__top__button__followers
             = link_to followers_user_path, class: 'btn btn-default' do
               %h1 フォロワー
-      .user-details-content__right__content
-        .user-details-content__right__content__top
-          %h2 フォローしたユーザー
-        .user-details-content__right__content__center
-          

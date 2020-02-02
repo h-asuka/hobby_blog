@@ -32,4 +32,5 @@
         .user-details-content__right__content__top
           %h2 フォローしたユーザー
         .user-details-content__right__content__center
-          
+          - @user.followings.each do |user|
+            = user.nickname

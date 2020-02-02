@@ -11,14 +11,24 @@
           = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "150x150", class: 'mypage__icon'
       .user-details-content__profile__name
         = @user.nickname
-      .user-deteils-content__profile__follow
+      .user-details-content__profile__follow
         = render 'relationships/follow_button', user: @user
+      -# .user-details-content__profile__follow-count
+      -#   .followings
+      -#     = @user.followings.count
+      -#     フォロー
+      -#   .followers
+      -#     = @user.followers.count
+      -#     フォロワー
     .user-details-content__right
       .user-details-content__right__top
         .user-details-content__right__top__button
           .user-details-content__right__top__button__post
             = link_to user_path(@user), class: 'btn btn-default' do
-              %h1 投稿
+              .title
+                投稿
+              .count
+                = @user.posts.count
           .user-details-content__right__top__button__like
             = link_to favorites_user_path, class: 'btn btn-default' do
               %h1 いいねした投稿

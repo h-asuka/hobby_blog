@@ -8,12 +8,22 @@
       width: 20%;
       height: 40%;
       text-align: center;
-      margin: 20px 20px 0px 100px;
       &__image {
         margin-top: 30px;
       }
       &__name {
         margin-top: 10px;
+      }
+      &__follow {
+
+      }
+      &__follow-count {
+        display: flex;
+        .followings {
+        }
+        .followers {
+
+        }
       }
     }
     &__right {
@@ -26,6 +36,8 @@
         text-align: center;
         &__button {
           display: flex;
+          justify-content: center;
+          // align-items: center;
           &__post {
             width: 25%;
             line-height: 72.69px;
@@ -99,6 +111,14 @@
 .btn-default {
   text-decoration: none;
   color: black;
+  display: flex;
+  .title {
+
+  }
+  .count {
+    margin-left: 5px;
+    background-color: #EEEEEE;
+  }
 }
 
 .show-postlist {

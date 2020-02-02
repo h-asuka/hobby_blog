@@ -22,22 +22,22 @@
       -#     フォロワー
     .user-details-content__right
       .user-details-content__right__top
-        .user-details-content__right__top__button
-          .user-details-content__right__top__button__post
-            = link_to user_path(@user), class: 'btn btn-default' do
-              .title
-                投稿
-              .count
-                = @user.posts.count
-          .user-details-content__right__top__button__like
-            = link_to favorites_user_path, class: 'btn btn-default' do
-              %h1 いいねした投稿
-          .user-details-content__right__top__button__following
-            = link_to followings_user_path, class: 'btn btn-default' do
-              %h1 フォロー
-          .user-details-content__right__top__button__followers
-            = link_to followers_user_path, class: 'btn btn-default' do
-              %h1 フォロワー
+        .user-details-content__right__top__post
+          = link_to user_path(@user), class: 'btn btn-default' do
+            %h1 投稿
+            -# .title
+            -#   投稿
+            -# .count
+            -#   = @user.posts.count
+        .user-details-content__right__top__like
+          = link_to favorites_user_path, class: 'btn btn-default' do
+            %h1 いいねした投稿
+        .user-details-content__right__top__following
+          = link_to followings_user_path, class: 'btn btn-default' do
+            %h1 フォロー
+        .user-details-content__right__top__followers
+          = link_to followers_user_path, class: 'btn btn-default' do
+            %h1 フォロワー
       .user-details-content__right__content
         .user-details-content__right__content__top
           %h2 投稿

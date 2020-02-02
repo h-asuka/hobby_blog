@@ -20,12 +20,12 @@ class UsersController < ApplicationController
 
   def favorites
     @user = User.find(params[:id])
-    @users = @user.followings
     @posts = @user.posts
   end
 
   def followings
     @user = User.find(params[:id])
+    @users = @user.followings
     @posts = @user.posts
   end
 

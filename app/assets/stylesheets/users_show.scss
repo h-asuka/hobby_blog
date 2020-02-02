@@ -136,12 +136,10 @@
   }
   .showpost {
     width: 60%;
-    height: 157px;
     &--title {
       width: 100%;
       font-size: 18px;
       font-weight: 400;
-      line-height: 157px;
       text-decoration: none;
       color:black;
       overflow-x: auto;
@@ -166,11 +164,13 @@
   .followings-photo {
 
   }
-  .followings-name {
-    margin-left: 20px;
-    &__title {
+  .followings-nickname {
+    margin-left: 30px;
+    width: 60%;
+    &--title {
       color: black;
       text-decoration: none;
+      font-size: 25px;
     }
   }
   .followings-button {

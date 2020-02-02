@@ -25,11 +25,13 @@ class UsersController < ApplicationController
 
   def followings
     @user = User.find(params[:id])
+    @users = @user.followings
     @posts = @user.posts
   end
 
   def followers
     @user = User.find(params[:id])
+    @users = @user.followers
     @posts = @user.posts
   end
 

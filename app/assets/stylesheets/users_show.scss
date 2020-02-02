@@ -8,12 +8,22 @@
       width: 20%;
       height: 40%;
       text-align: center;
-      margin: 20px 20px 0px 100px;
       &__image {
         margin-top: 30px;
       }
       &__name {
         margin-top: 10px;
+      }
+      &__follow {
+
+      }
+      &__follow-count {
+        display: flex;
+        .followings {
+        }
+        .followers {
+
+        }
       }
     }
     &__right {
@@ -23,33 +33,31 @@
       &__top {
         height: 10%;
         background-color: white;
+        display: flex;
         text-align: center;
-        &__button {
-          display: flex;
-          &__post {
-            width: 25%;
-            line-height: 72.69px;
-            border: solid #EEEEEE;
-            border-width: 2px 2px 2px 2px;
-          }
-          &__like {
-            width: 25%;
-            line-height: 72.69px;
-            border: solid #EEEEEE;
-            border-width: 2px 2px 2px 0px;
-          }
-          &__following {
-            width: 25%;
-            line-height: 72.69px;
-            border: solid #EEEEEE;
-            border-width: 2px 2px 2px 0px;
-          }
-          &__followers {
-            width: 25%;
-            line-height: 72.69px;
-            border: solid #EEEEEE;
-            border-width: 2px 2px 2px 0px;
-          }
+        &__post {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 2px;
+        }
+        &__like {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
+        }
+        &__following {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
+        }
+        &__followers {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
         }
       }
       &__content {
@@ -97,8 +105,18 @@
 }
 
 .btn-default {
+  height: 100%;
   text-decoration: none;
   color: black;
+  // display: flex;
+  // .title {
+  //   margin-left: 89px;
+  // }
+  // .count {
+  //   margin-left: 10px;
+  //   background-color: #EEEEEE;
+  //   height: 20px;
+  // }
 }
 
 .show-postlist {
@@ -111,15 +129,17 @@
   }
   .showside-nickname {
     text-align: center;
+    &--title {
+      text-decoration: none;
+      color:black;
+    }
   }
   .showpost {
     width: 60%;
-    height: 157px;
     &--title {
       width: 100%;
       font-size: 18px;
       font-weight: 400;
-      line-height: 157px;
       text-decoration: none;
       color:black;
       overflow-x: auto;
@@ -134,6 +154,27 @@
     // &__form {
       
     // }
+  }
+}
+.show-follow {
+  display: flex;
+  border-bottom: 2px solid #f6f6f6;
+  height: 30%;
+  align-items: center;
+  .follow-photo {
+
+  }
+  .follow-nickname {
+    margin-left: 30px;
+    width: 60%;
+    &--title {
+      color: black;
+      text-decoration: none;
+      font-size: 25px;
+    }
+  }
+  .follow-button {
+
   }
 }
 

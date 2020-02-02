@@ -15,19 +15,18 @@
         = render 'relationships/follow_button', user: @user
     .user-details-content__right
       .user-details-content__right__top
-        .user-details-content__right__top__button
-          .user-details-content__right__top__button__post
-            = link_to user_path(@user), class: 'btn btn-default' do
-              %h1 投稿
-          .user-details-content__right__top__button__like
-            = link_to favorites_user_path, class: 'btn btn-default' do
-              %h1 いいねした投稿
-          .user-details-content__right__top__button__following
-            = link_to followings_user_path, class: 'btn btn-default' do
-              %h1 フォロー
-          .user-details-content__right__top__button__followers
-            = link_to followers_user_path, class: 'btn btn-default' do
-              %h1 フォロワー
+        .user-details-content__right__top__post
+          = link_to user_path(@user), class: 'btn btn-default' do
+            %h1 投稿
+        .user-details-content__right__top__like
+          = link_to favorites_user_path, class: 'btn btn-default' do
+            %h1 いいねした投稿
+        .user-details-content__right__top__following
+          = link_to followings_user_path, class: 'btn btn-default' do
+            %h1 フォロー
+        .user-details-content__right__top__followers
+          = link_to followers_user_path, class: 'btn btn-default' do
+            %h1 フォロワー
       .user-details-content__right__content
         .user-details-content__right__content__top
           %h2 いいねした投稿
@@ -40,7 +39,7 @@
                 - else
                   = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "100x100", class: 'mypage__icon'
                 .showside-nickname
-                  = post.user.nickname
+                  = link_to post.user.nickname, user_path(post.user), class: "showside-nickname--title"
               .showpost
                 = link_to post.title, post_path(post.id), class: "showpost--title"
               .showlike

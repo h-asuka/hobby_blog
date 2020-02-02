@@ -156,15 +156,15 @@
     // }
   }
 }
-.show-followings {
+.show-follow {
   display: flex;
   border-bottom: 2px solid #f6f6f6;
   height: 30%;
   align-items: center;
-  .followings-photo {
+  .follow-photo {
 
   }
-  .followings-nickname {
+  .follow-nickname {
     margin-left: 30px;
     width: 60%;
     &--title {
@@ -173,7 +173,7 @@
       font-size: 25px;
     }
   }
-  .followings-button {
+  .follow-button {
 
   }
 }

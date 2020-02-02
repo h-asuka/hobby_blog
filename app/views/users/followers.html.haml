@@ -34,7 +34,7 @@
           - @user.followers.each do |user|
             .show-follow
               .follow-photo
-                -if current_user.image.present?
+                -if user.image.present?
                   = image_tag user.image.to_s, size: "120x120", class: 'mypage__icon'
                 - else
                   = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "120x120", class: 'mypage__icon'

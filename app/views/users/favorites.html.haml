@@ -34,7 +34,7 @@
           - @user.liked_posts.each do |post|
             .show-postlist
               .showside-photo
-                -if current_user.image.present?
+                -if post.user.image.present?
                   = image_tag post.user.image.to_s, size: "100x100", class: 'mypage__icon'
                 - else
                   = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "100x100", class: 'mypage__icon'

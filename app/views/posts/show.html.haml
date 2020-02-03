@@ -12,18 +12,45 @@
         = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
     .details-content__text
       = simple_format @post.content
-    .details-content__like-count
-      いいね件数:
-      = @post.likes.count
     .details-content__like
-      - if current_user.already_liked?(@post)
-        .details-content__like__delite
-          = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-      -else
-        .details-content__like__addition
-          = button_to 'いいね', post_likes_path(@post)
-    .details-content__like__user
-      いいねしたユーザー
-    .details-content__like__user-count
-      - @post.liked_users.each do |user|
-        = user.nickname
+      .details-content__like__count
+        いいね件数:
+        = @post.likes.count
+      .details-content__like__bottun
+        - if current_user.already_liked?(@post)
+          .details-content__like__delite
+            = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
+        -else
+          .details-content__like__addition
+            = button_to 'いいね', post_likes_path(@post)
+      .details-content__like__user
+        いいねしたユーザー:
+      .details-content__like__user-name
+        - @post.liked_users.each do |user|
+          = link_to user.nickname, user_path(user), class: "user-nickname"
+    .details-content__comment
+      .details-content__comment__list
+        - @comments.each do |comment|
+          .commentlist
+            .comment-photo
+              -if comment.user.image.present?
+                = image_tag comment.user.image.to_s, size: "60x60"
+              - else
+                = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60"
+            .comment-nickname
+              = link_to comment.user.nickname, user_path(comment.user), class: "comment-nickname--title"
+            .comment-text
+              = comment.text
+      .details-content__comment__practice
+        - if current_user
+          .details-content__comment__practice__photo
+            -if current_user.image.present?
+              = image_tag current_user.image.to_s, size: "60x60", class: 'mypage__icon'
+            - else
+              = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
+          .details-content__comment__practice__text
+            = form_with(model: [@post, @comment], local: true) do |f|
+              = f.text_area :text, placeholder: "コメントを入力...", class: "details-content__comment__practice__text__form"
+              = f.submit "投稿する" 
+        - else
+          ※※※ コメントの投稿には新規登録/ログインが必要です ※※※

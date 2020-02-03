@@ -1,29 +1,35 @@
 .details-container {
   background-color: #EEEEEE;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  max-height: 100%;
   .details-content {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    max-height: 100%;
     padding: 50px;
     width: 70%;
     background-color: white;
     margin: 0 auto;
     &__title {
+      height: 30px;
       text-align: center;
       font-size: 18px;
       font-weight: 400;
       margin-bottom: 10px;
     }
     &__time {
+      height: 20px;
       text-align: center;
       margin-bottom: 10px;
     }
     &__edit {
+      height: 30px;
       width: 124px;
       display: flex;
       margin: 0 auto;
       .postManage {
         margin-top: 10px;
         &__edit {
+          height: 24px;
           display: block;
           border-radius: 5px;
           color: #ffffff;
@@ -33,6 +39,7 @@
           margin-right: 10px;
         }
         &__delete{
+          height: 24px;
           display: block;
           border-radius: 5px;
           color: #ffffff;
@@ -45,7 +52,80 @@
     }
     &__text {
       margin-top: 20px;
-      height: 60%;
+      padding: 10px;
+    }
+    &__like {
+      height: 60px;
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+      border-bottom: 2px solid #EEEEEE;
+      &__count {
+        font-size: 18px;
+      }
+      &__bottun {
+        margin-left: 10px;
+      }
+      &__user {
+        margin-left: 10px;
+      }
+      &__user-name {
+        margin-left: 5px;
+        width: 45%;
+        .user-nickname {
+          text-decoration: none;
+          color: black;
+          overflow-x: auto;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+    }
+    &__comment {
+      height: 100%;
+      &__list {
+        .commentlist {
+          display: flex;
+          border-bottom: 2px solid #f6f6f6;
+          height: 30%;
+          align-items: center;
+          margin-top: 30px;
+        }
+        .comment-nickname {
+          margin-left: 30px;
+          width: 25%;
+          &--title {
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+          }
+        }
+        .comment-text {
+          margin-left: 20px;
+          height: 40px;
+          width: 60%;
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          font-size: 20px;
+        }
+      }
+      &__practice {
+        height: 150px;
+        display: flex;
+        margin-top: 30px;
+        &__photo {
+
+        }
+        &__text {
+          width: 60%;
+          margin-left: 20px;
+          &__form {
+            width: 100%;
+            padding: 10px;
+          }
+        }
+      }
     }
   }
 }

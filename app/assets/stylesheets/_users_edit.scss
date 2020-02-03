@@ -15,12 +15,17 @@
     &__edit {
       height: 90%;
       &__image {
-
+        margin: 0 auto;
+        height: 90px;
+        width: 90px;
+        background-color: #F5F5F5;
+        border: 1px dashed #ccc;
+        .image-label {
+          height: 100px;
+          width: 100px;
+        }
         .file {
           display: none;
-        }
-        .edit-icon {
-
         }
       }
       &__nickname {

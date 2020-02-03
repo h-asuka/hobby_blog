@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(11).pluck(:post_id))
     @new_posts = Post.limit(11).order(" created_at DESC ")
+    @all_user = User.all
     if user_signed_in?
       @posts = current_user.posts.includes(:user).order(id: "DESC")
     else

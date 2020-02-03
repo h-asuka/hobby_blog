@@ -58,6 +58,7 @@
       display: flex;
       margin-top: 20px;
       align-items: center;
+      border-bottom: 2px solid #EEEEEE;
       &__count {
         font-size: 18px;
       }
@@ -73,6 +74,25 @@
         .user-nickname {
           text-decoration: none;
           color: #0A0661;
+          overflow-x: auto;
+          white-space: nowrap;
+          display: block;
+        }
+      }
+    }
+    &__comment {
+      height: 150px;
+      display: flex;
+      margin-top: 30px;
+      &__photo {
+
+      }
+      &__text {
+        width: 60%;
+        margin-left: 20px;
+        &__form {
+          width: 100%;
+          padding: 10px;
         }
       }
     }

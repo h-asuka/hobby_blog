@@ -38,8 +38,8 @@
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
+      text-align: center;
       .mypage {
-        text-align: center;
         .mypage--link {
           text-decoration: none;
           color: black;
@@ -60,10 +60,10 @@
         .mypost {
           height: 100%;
           margin-left: 20px;
-          width: 40%;
+          width: 37%;
           &--title {
             height: 40px;
-            width: 124.8px;
+            width: 123.58px;
             font-size: 18px;
             font-weight: 400;
             line-height: 40px;
@@ -76,17 +76,17 @@
         }
         .nickname {
           height: 40px;
-          width: 40％;
+          width: 37%;
           line-height: 40px;
           margin-left: 10px;
-          overflow-x: auto;
-          white-space: nowrap;
-          display: block;
-          .user-nickname {
+          .u-nickname {
             height: 40px;
-            width: 152.8px;
+            width: 123,58px;
             text-decoration: none;
             color: #0A0661;
+            overflow-x: auto;
+            white-space: nowrap;
+            display: block;
           }
         }
       }
@@ -145,14 +145,14 @@
     width: 40％;
     line-height: 40px;
     margin-left: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
-    display: block;
     .user-nickname {
       height: 40px;
-      width: 152.8px;
+      width: 142.8px;
       text-decoration: none;
       color: #0A0661;
+      overflow-x: auto;
+      white-space: nowrap;
+      display: block;
     }
   }
 }

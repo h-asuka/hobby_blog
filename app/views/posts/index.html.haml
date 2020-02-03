@@ -31,7 +31,7 @@
             .mypost
               = link_to post.title, post_path(post.id), class: "mypost--title"
             .nickname
-              = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+              = link_to post.user.nickname, user_path(post.user), class: "u-nickname"
     - else
       .right-content__signed-out
         .register-content

@@ -1,29 +1,35 @@
 .details-container {
   background-color: #EEEEEE;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+  max-height: 100%;
   .details-content {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    max-height: 100%;
     padding: 50px;
     width: 70%;
     background-color: white;
     margin: 0 auto;
     &__title {
+      height: 30px;
       text-align: center;
       font-size: 18px;
       font-weight: 400;
       margin-bottom: 10px;
     }
     &__time {
+      height: 20px;
       text-align: center;
       margin-bottom: 10px;
     }
     &__edit {
+      height: 30px;
       width: 124px;
       display: flex;
       margin: 0 auto;
       .postManage {
         margin-top: 10px;
         &__edit {
+          height: 24px;
           display: block;
           border-radius: 5px;
           color: #ffffff;
@@ -33,6 +39,7 @@
           margin-right: 10px;
         }
         &__delete{
+          height: 24px;
           display: block;
           border-radius: 5px;
           color: #ffffff;
@@ -45,7 +52,29 @@
     }
     &__text {
       margin-top: 20px;
-      height: 60%;
+    }
+    &__like {
+      height: 60px;
+      display: flex;
+      margin-top: 20px;
+      align-items: center;
+      &__count {
+        font-size: 18px;
+      }
+      &__bottun {
+        margin-left: 10px;
+      }
+      &__user {
+        margin-left: 10px;
+      }
+      &__user-name {
+        margin-left: 5px;
+        width: 45%;
+        .user-nickname {
+          text-decoration: none;
+          color: #0A0661;
+        }
+      }
     }
   }
 }

@@ -34,10 +34,15 @@
               = link_to post.user.nickname, user_path(post.user), class: "u-nickname"
     - else
       .right-content__signed-out
-        .register-content
-          .register-content__new
-            = link_to "新規登録", new_user_registration_path, class: "content-register"
-          .register-content__log-in
-            = link_to "ログイン", new_user_session_path, class: "content-login"
         .advertising
           ユーザー紹介
+        .user-list
+          - @all_user.each do |user|
+            .user-line
+              .introduction-photo
+                -if user.image.present?
+                  = image_tag user.image.to_s, size: "50x50", class: 'mypage__icon'
+                - else
+                  = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "50x50", class: 'mypage__icon'
+              .introduction-nickname
+                = link_to user.nickname, user_path(user), class: "introduction-nickname--title"

@@ -93,20 +93,38 @@
     }
     .right-content__signed-out {
       height: 100%;
-      .register-content {
-        height: 30%;
-        background-color: orange;
-        .new-register {
-
-        }
-        .log-in {
-  
-        }
-      }
+      background-color: #D8DCE9;
+      padding: 10px;
+      overflow: auto;
+      border-radius: 1%;
+      text-align: center;
       .advertising {
-        margin-top: 65px;
-        height: 60%;
-        background-color: darkorchid;
+
+      }
+      .user-list {
+        margin-top: 10px;
+        .user-line {
+          display: flex;
+          border-bottom: 2px solid #f6f6f6;
+          height: 40%;
+          align-items: center;
+          margin-top: 10px;
+          .introduction-photo {
+        
+          }
+          .introduction-nickname {
+            margin-left: 30px;
+            width: 70%;
+            &--title {
+              color: black;
+              text-decoration: none;
+              font-size: 25px;
+              overflow-x: auto;
+              white-space: nowrap;
+              display: block;
+            }
+          }
+        }
       }
     }
   }
@@ -156,3 +174,4 @@
     }
   }
 }
+

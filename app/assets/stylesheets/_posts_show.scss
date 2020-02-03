@@ -52,6 +52,7 @@
     }
     &__text {
       margin-top: 20px;
+      padding: 10px;
     }
     &__like {
       height: 60px;
@@ -73,7 +74,7 @@
         width: 45%;
         .user-nickname {
           text-decoration: none;
-          color: #0A0661;
+          color: black;
           overflow-x: auto;
           white-space: nowrap;
           display: block;
@@ -81,18 +82,48 @@
       }
     }
     &__comment {
-      height: 150px;
-      display: flex;
-      margin-top: 30px;
-      &__photo {
-
+      height: 100%;
+      &__list {
+        .commentlist {
+          display: flex;
+          border-bottom: 2px solid #f6f6f6;
+          height: 30%;
+          align-items: center;
+          margin-top: 30px;
+        }
+        .comment-nickname {
+          margin-left: 30px;
+          width: 25%;
+          &--title {
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
+          }
+        }
+        .comment-text {
+          margin-left: 20px;
+          height: 40px;
+          width: 60%;
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+          font-size: 20px;
+        }
       }
-      &__text {
-        width: 60%;
-        margin-left: 20px;
-        &__form {
-          width: 100%;
-          padding: 10px;
+      &__practice {
+        height: 150px;
+        display: flex;
+        margin-top: 30px;
+        &__photo {
+
+        }
+        &__text {
+          width: 60%;
+          margin-left: 20px;
+          &__form {
+            width: 100%;
+            padding: 10px;
+          }
         }
       }
     }

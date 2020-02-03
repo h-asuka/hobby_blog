@@ -29,15 +29,28 @@
         - @post.liked_users.each do |user|
           = link_to user.nickname, user_path(user), class: "user-nickname"
     .details-content__comment
-      - if current_user
-        .details-content__comment__photo
-          -if current_user.image.present?
-            = image_tag current_user.image.to_s, size: "60x60", class: 'mypage__icon'
-          - else
-            = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
-        .details-content__comment__text
-          = form_with(model: [@post, @comment], local: true) do |f|
-            = f.text_area :text, placeholder: "コメントを入力...", class: "details-content__comment__text__form"
-            = f.submit "投稿する" 
-      - else
-        ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+      .details-content__comment__list
+        - @comments.each do |comment|
+          .commentlist
+            .comment-photo
+              -if comment.user.image.present?
+                = image_tag comment.user.image.to_s, size: "60x60"
+              - else
+                = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60"
+            .comment-nickname
+              = link_to comment.user.nickname, user_path(comment.user), class: "comment-nickname--title"
+            .comment-text
+              = comment.text
+      .details-content__comment__practice
+        - if current_user
+          .details-content__comment__practice__photo
+            -if current_user.image.present?
+              = image_tag current_user.image.to_s, size: "60x60", class: 'mypage__icon'
+            - else
+              = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "60x60", class: 'mypage__icon'
+          .details-content__comment__practice__text
+            = form_with(model: [@post, @comment], local: true) do |f|
+              = f.text_area :text, placeholder: "コメントを入力...", class: "details-content__comment__practice__text__form"
+              = f.submit "投稿する" 
+        - else
+          ※※※ コメントの投稿には新規登録/ログインが必要です ※※※

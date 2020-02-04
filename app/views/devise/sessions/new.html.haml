@@ -13,3 +13,5 @@
           = f.password_field :password, autocomplete: "current-password"
         .actions
           = f.submit "Log in"
+        .new
+          = link_to "まだ新規登録されてない方はこちら", new_user_registration_path, class: "new-register"

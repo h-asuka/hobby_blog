@@ -55,9 +55,10 @@
       padding: 10px;
     }
     &__like {
-      height: 60px;
+      height: 100%;
       display: flex;
-      margin-top: 20px;
+      // margin-top: 20px;
+      padding: 20px 0px 20px 0px;
       align-items: center;
       border-bottom: 2px solid #EEEEEE;
       &__count {
@@ -70,14 +71,14 @@
         margin-left: 10px;
       }
       &__user-name {
-        margin-left: 5px;
-        width: 45%;
+        width: 47%;
+        display: flex;
+        flex-wrap: wrap;
         .user-nickname {
           text-decoration: none;
           color: black;
-          overflow-x: auto;
-          white-space: nowrap;
           display: block;
+          margin-left: 10px;
         }
       }
     }

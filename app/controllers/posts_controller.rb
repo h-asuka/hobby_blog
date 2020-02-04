@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :move_to_index, except: :index
+
   def index
     @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(11).pluck(:post_id))
     @new_posts = Post.limit(11).order(" created_at DESC ")
@@ -51,6 +53,10 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to new_user_session_path unless user_signed_in?
   end
 
   #ガード節

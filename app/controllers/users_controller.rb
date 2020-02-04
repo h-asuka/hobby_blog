@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :move_to_index, except: :index
+  
   def show
     @user = User.find(params[:id])
     @posts = @user.posts
@@ -40,5 +42,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:nickname, :email, :image)
   end
+
+  def move_to_index
+    redirect_to new_user_session_path unless user_signed_in?
+  end 
 
 end

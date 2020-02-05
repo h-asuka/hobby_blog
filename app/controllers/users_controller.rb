@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :move_to_index, except: :index
-  
+
   def show
     @user = User.find(params[:id])
     @posts = @user.posts

@@ -3,7 +3,7 @@
 .user-details-container
   .user-details-content
     .user-details-content__profile
-      -if current_user.image.present?
+      -if @user.image.present?
         .user-details-content__profile__image
           = image_tag @user.image.to_s, size: "150x150", class: 'mypage__icon'
       - else
@@ -45,7 +45,7 @@
           - @posts.each do |post|
             .show-postlist
               .showside-photo
-                -if current_user.image.present?
+                -if @user.image.present?
                   = image_tag @user.image.to_s, size: "120x120", class: 'mypage__icon'
                 - else
                   = image_tag "/images/noimage.jpeg", alt: "プロフィール画像",size: "120x120", class: 'mypage__icon'

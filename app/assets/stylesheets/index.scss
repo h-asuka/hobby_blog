@@ -12,12 +12,16 @@
     width: 80%;
     display: flex;
     .article-rank {
+      height: 100%;
       width: 45%;
       background-color: #D8DCE9;
       text-align: center;
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
+      .rank-title {
+        height: 10%;
+      }
     }
     .article-new {
       width: 45%;
@@ -129,28 +133,30 @@
     }
   }
 }
+.contents {
+  display: flex;
+  height: 45px;
+}
 
 .postlist {
   display: flex;
   border-bottom: 1px solid #f6f6f6;
   align-items: center;
-  .side-image {
-    height: 40px;
-    width: 40px;
-    border: solid 1px;
-    background-color: #E7D0C6;
-    margin: 5px;
+  height: 51px;
+  line-height: 51px;
+  .date {
+    height: 100%;
+    margin-left: 20px;
+    width: 10%;
   }
   .post {
     height: 100%;
     margin-left: 20px;
-    width: 40%;
+    width: 45%;
     &--title {
-      height: 40px;
       width: 152.8px;
       font-size: 18px;
       font-weight: 400;
-      line-height: 40px;
       text-decoration: none;
       color: #0A0661;
       overflow-x: auto;
@@ -159,12 +165,9 @@
     }
   }
   .nickname {
-    height: 40px;
-    width: 40％;
-    line-height: 40px;
+    width: 45％;
     margin-left: 10px;
-    .user-nickname {
-      height: 40px;
+    &--user {
       width: 142.8px;
       text-decoration: none;
       color: #0A0661;

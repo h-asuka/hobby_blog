@@ -3,23 +3,34 @@
 .main-container
   .slick-content
     .article-rank
-      人気の記事
-      - @all_ranks.each do |post|
-        .postlist
-          .side-image
-          .post
-            = link_to post.title, post_path(post.id), class: "post--title"
-          .nickname
-            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+      .rank-title
+        人気の記事
+      .contents
+        .contents-left
+          日付
+        .contents-center
+          タイトル
+        .contents-right
+          ニックネーム
+      .rank-container
+        - @all_ranks.each do |post|
+          .postlist
+            .date
+              = post.created_at.strftime('%-m/%-d')
+            .post
+              = link_to post.title, post_path(post.id), class: "post--title"
+            .nickname
+              = link_to post.user.nickname, user_path(post.user), class: "nickname--user"
     .article-new
       新着記事
       - @new_posts.each do |post|
         .postlist
-          .side-image
+          .date
+            = post.created_at.strftime('%-m/%-d')
           .post
             = link_to post.title, post_path(post.id), class: "post--title"
           .nickname
-            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+            = link_to post.user.nickname, user_path(post.user), class: "nickname--user"
   .right-content
     - if user_signed_in?
       .right-content__signed-in
@@ -27,7 +38,8 @@
           = link_to "マイページ", user_path(current_user), class: "mypage--link"
         - @posts.each do |post|
           .my-postlist
-            .myside-image
+            .date
+              = post.created_at.strftime('%-m/%-d')
             .mypost
               = link_to post.title, post_path(post.id), class: "mypost--title"
             .nickname

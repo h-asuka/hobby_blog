@@ -11,6 +11,10 @@ class RelationshipsController < ApplicationController
       flash.now[:alert] = 'ユーザーのフォローに失敗しました'
       redirect_to user
     end
+    # respond_to do |format|  
+    #   format.html { redirect_to user }  
+    #   format.js
+    # end
   end
 
   def destroy
@@ -23,6 +27,10 @@ class RelationshipsController < ApplicationController
       flash.now[:alert] = 'ユーザーのフォロー解除に失敗しました'
       redirect_to user
     end
+    # respond_to do |format|  
+    #   format.html { redirect_to user }  
+    #   format.js
+    # end
   end
 
   private

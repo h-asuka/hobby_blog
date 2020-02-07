@@ -9,12 +9,15 @@
   height: calc(100vh - 80px);
   padding: 50px;
   display: flex;
+  background-image: url(417318.jpg);
   .slick-content {
     width: 70%;
     display: flex;
     .article-rank {
       width: 45%;
       background-color: #D8DCE9;
+      background-image: url(75386336.jpg);
+      background-size: contain;
       text-align: center;
       padding: 10px;
       overflow: auto;
@@ -26,7 +29,8 @@
     .article-new {
       width: 45%;
       margin-left: 50px;
-      background-color: #D8DCE9;
+      background-image: url(75386336.jpg);
+      background-size: contain;
       text-align: center;
       padding: 10px;
       overflow: auto;
@@ -40,7 +44,8 @@
     margin-left: 50px;
     width: 30%;
     .right-content__signed-in {
-      background-color: #D8DCE9;
+      background-image: url(75386336.jpg);
+      background-size: contain;
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
@@ -55,7 +60,8 @@
     }
     .right-content__signed-out {
       height: 100%;
-      background-color: #D8DCE9;
+      background-image: url(75386336.jpg);
+      background-size: contain;
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
@@ -104,7 +110,7 @@
 
 .postlist {
   display: flex;
-  border-bottom: 1px solid #f6f6f6;
+  border-bottom: 1px solid #d4d2d2;
   align-items: center;
   height: 51px;
   line-height: 51px;

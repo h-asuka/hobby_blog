@@ -2,12 +2,11 @@
   height: 80px;
   display: flex;
   justify-content: space-between;
-  background-color:white;
-  border-bottom: 1px solid #EEEEEE;
   padding: 20px;
+  background-image: url(images.jpg);
   .title {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 35px;
   }
   // .table-content {
@@ -29,30 +28,30 @@
     font-size: 20px;
     .new-post {
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .log-out {
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .user-name {
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .profile-edit {
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .profile-photo {
 
     }
     .new-register {
       text-decoration: none;
-      color: black;
+      color: white;
     }
     .log-in {
       text-decoration: none;
-      color: black;
+      color: white;
     }
   }
   // .search {

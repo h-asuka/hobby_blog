@@ -9,10 +9,9 @@
   padding: 50px;
   display: flex;
   .slick-content {
-    width: 80%;
+    width: 70%;
     display: flex;
     .article-rank {
-      height: 100%;
       width: 45%;
       background-color: #D8DCE9;
       text-align: center;
@@ -20,7 +19,7 @@
       overflow: auto;
       border-radius: 1%;
       .rank-title {
-        height: 10%;
+        height: 35px;
       }
     }
     .article-new {
@@ -31,67 +30,25 @@
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
+      .new-title {
+        height: 35px;
+      }
     }
   }
   .right-content {
     margin-left: 50px;
     width: 30%;
     .right-content__signed-in {
-      height: 100%;
       background-color: #D8DCE9;
       padding: 10px;
       overflow: auto;
       border-radius: 1%;
       text-align: center;
       .mypage {
+        height: 35px;
         .mypage--link {
           text-decoration: none;
           color: black;
-        }
-      }
-      .my-postlist {
-        background-color: #D8DCE9;
-        display: flex;
-        border-bottom: 1px solid #f6f6f6;
-        align-items: center;
-        .myside-image {
-          height: 40px;
-          width: 40px;
-          border: solid 1px;
-          background-color: #E7D0C6;
-          margin: 5px;
-        }
-        .mypost {
-          height: 100%;
-          margin-left: 20px;
-          width: 37%;
-          &--title {
-            height: 40px;
-            width: 123.58px;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 40px;
-            text-decoration: none;
-            color: #0A0661;
-            overflow-x: auto;
-            white-space: nowrap;
-            display: block;
-          }
-        }
-        .nickname {
-          height: 40px;
-          width: 37%;
-          line-height: 40px;
-          margin-left: 10px;
-          .u-nickname {
-            height: 40px;
-            width: 123,58px;
-            text-decoration: none;
-            color: #0A0661;
-            overflow-x: auto;
-            white-space: nowrap;
-            display: block;
-          }
         }
       }
     }
@@ -102,9 +59,6 @@
       overflow: auto;
       border-radius: 1%;
       text-align: center;
-      .advertising {
-
-      }
       .user-list {
         margin-top: 10px;
         .user-line {
@@ -135,7 +89,16 @@
 }
 .contents {
   display: flex;
-  height: 45px;
+  height: 35px;
+  &__left {
+    width: 10%;
+  }
+  &__center {
+    width: 55%;
+  }
+  &__right {
+    width: 35%;
+  }
 }
 
 .postlist {
@@ -145,16 +108,12 @@
   height: 51px;
   line-height: 51px;
   .date {
-    height: 100%;
-    margin-left: 20px;
     width: 10%;
   }
   .post {
-    height: 100%;
-    margin-left: 20px;
-    width: 45%;
+    width: 55%;
     &--title {
-      width: 152.8px;
+      margin-left: 10px;
       font-size: 18px;
       font-weight: 400;
       text-decoration: none;
@@ -165,10 +124,11 @@
     }
   }
   .nickname {
-    width: 45％;
-    margin-left: 10px;
+    width: 35%;
     &--user {
-      width: 142.8px;
+      margin-left: 10px;
+      font-size: 18px;
+      font-weight: 400;
       text-decoration: none;
       color: #0A0661;
       overflow-x: auto;

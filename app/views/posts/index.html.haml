@@ -30,7 +30,7 @@
           タイトル
         %li.contents__right
           ニックネーム
-      - @all_ranks.each do |post|
+      - @new_posts.each do |post|
         %ul.postlist
           %li.date
             = post.created_at.strftime('%-m/%-d')

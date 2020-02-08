@@ -9,13 +9,14 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
   end
+  
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:notice] = "変更を保存しました"
-      redirect_to user_path(current_user)
+      flash[:success] = 'ユーザー情報を編集しました。'
+      redirect_to root_path
     else
-      flash[:alert] = "編集の保存に失敗しました"
+      flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
       render :edit
     end
   end

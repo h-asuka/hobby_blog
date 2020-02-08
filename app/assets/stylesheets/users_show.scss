@@ -41,11 +41,25 @@
           border: solid #EEEEEE;
           border-width: 2px 2px 2px 2px;
         }
+        &__post-main {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 2px;
+          box-shadow: 1px 1px 2px gray;
+        }
         &__like {
           width: 25%;
           line-height: 72.69px;
           border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
+        }
+        &__like-main {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
+          box-shadow: 1px 1px 2px gray;
         }
         &__following {
           width: 25%;
@@ -53,11 +67,25 @@
           border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
         }
+        &__following-main {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
+          box-shadow: 1px 1px 2px gray;
+        }
         &__followers {
           width: 25%;
           line-height: 72.69px;
           border: solid #EEEEEE;
           border-width: 2px 2px 2px 0px;
+        }
+        &__followers-main {
+          width: 25%;
+          line-height: 72.69px;
+          border: solid #EEEEEE;
+          border-width: 2px 2px 2px 0px;
+          box-shadow: 1px 1px 2px gray;
         }
       }
       &__content {

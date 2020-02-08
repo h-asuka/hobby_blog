@@ -1,22 +1,21 @@
 =render 'posts/header'
 
 .profile-container
-  .profile-content
-    .profile-content__top
-      プロフィールの編集
-    .profile-content__edit
-      = form_with model: @user,  local: true do |f|
-        .profile-content__edit__image
-          = f.label :image, class: "image-label" do
-            プロフィール画像をアップロード
-          = f.file_field :image ,class: 'file'
-        .profile-content__edit__nickname
-          = f.text_field :nickname, class: 'edit',value: @user.nickname
-        .profile-content__edit__email
-          = f.email_field :email, class: 'edit'
-        .profile-content__edit__password
-          = f.password_field :password, class: 'edit', placeholder: "新しいパスワード"
-        .profile-content__edit__password-confirmation
-          = f.password_field :password_confirmation, class: 'edit', placeholder: "新しいパスワード確認"
-        .profile-content__edit__bottom
-          = f.submit '変更する', class: 'edit-send'
+  .profile-container__top
+    プロフィールの編集
+  .profile-container__edit
+    = form_with model: @user,  local: true do |f|
+      .profile-container__edit__image
+        = f.label :image, class: "image-label" do
+          プロフィール画像をアップロード
+        = f.file_field :image ,class: 'file'
+      .profile-container__edit__nickname
+        = f.text_field :nickname, class: 'edit',value: @user.nickname
+      .profile-container__edit__email
+        = f.email_field :email, class: 'edit'
+      .profile-container__edit__password
+        = f.password_field :password, class: 'edit', placeholder: "新しいパスワード"
+      .profile-container__edit__password-confirmation
+        = f.password_field :password_confirmation, class: 'edit', placeholder: "新しいパスワード確認"
+      .profile-container__edit__bottom
+        = f.submit '変更する', class: 'edit-send'

@@ -1,53 +1,51 @@
 .profile-container {
   height: calc(100vh - 80px);;
-  background-color: white;
-  padding: 40px;
-  .profile-content {
-    width: 70%;
+  background-image: url(75386336.jpg);
+  background-size: contain;
+  padding: 50px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  &__top {
+    font-size: 25px;
+    height: 70px;
+    line-height: 70px;
+  }
+  &__edit {
     height: 90%;
-    background-color: #D8DCE9;
-    margin: 0 auto;
-    text-align: center;
-    &__top {
-      font-size: 25px;
-      height: 10%;
+    &__image {
+      margin: 0 auto;
+      height: 90px;
+      width: 90px;
+      background-color: #F5F5F5;
+      border: 1px dashed #ccc;
+      .image-label {
+        height: 100px;
+        width: 100px;
+      }
+      .file {
+        display: none;
+      }
     }
-    &__edit {
-      height: 90%;
-      &__image {
-        margin: 0 auto;
-        height: 90px;
-        width: 90px;
-        background-color: #F5F5F5;
-        border: 1px dashed #ccc;
-        .image-label {
-          height: 100px;
-          width: 100px;
-        }
-        .file {
-          display: none;
-        }
-      }
-      &__nickname {
-        margin-top: 10px;
-        height: 40px;
-      }
-      &__email {
-        margin-top: 10px;
-        height: 40px;
-      }
-      &__password {
-        margin-top: 10px;
-        height: 40px;
-      }
-      &__password-confirmation {
-        margin-top: 10px;
-        height: 40px;
-      }
-      &__bottom {
-        margin-top: 10px;
-        .edit-send {
-        }
+    &__nickname {
+      margin-top: 10px;
+      height: 40px;
+    }
+    &__email {
+      margin-top: 10px;
+      height: 40px;
+    }
+    &__password {
+      margin-top: 10px;
+      height: 40px;
+    }
+    &__password-confirmation {
+      margin-top: 10px;
+      height: 40px;
+    }
+    &__bottom {
+      margin-top: 10px;
+      .edit-send {
       }
     }
   }

@@ -3,35 +3,61 @@
 .main-container
   .slick-content
     .article-rank
-      人気の記事
+      .rank-title
+        人気の記事
+      %ul.contents
+        %li.contents__left
+          日付
+        %li.contents__center
+          タイトル
+        %li.contents__right
+          ニックネーム
       - @all_ranks.each do |post|
-        .postlist
-          .side-image
-          .post
+        %ul.postlist
+          %li.date
+            = post.created_at.strftime('%-m/%-d')
+          %li.post
             = link_to post.title, post_path(post.id), class: "post--title"
-          .nickname
-            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+          %li.nickname
+            = link_to post.user.nickname, user_path(post.user), class: "nickname--user"
     .article-new
-      新着記事
-      - @new_posts.each do |post|
-        .postlist
-          .side-image
-          .post
+      .new-title
+        新着記事
+      %ul.contents
+        %li.contents__left
+          日付
+        %li.contents__center
+          タイトル
+        %li.contents__right
+          ニックネーム
+      - @all_ranks.each do |post|
+        %ul.postlist
+          %li.date
+            = post.created_at.strftime('%-m/%-d')
+          %li.post
             = link_to post.title, post_path(post.id), class: "post--title"
-          .nickname
-            = link_to post.user.nickname, user_path(post.user), class: "user-nickname"
+          %li.nickname
+            = link_to post.user.nickname, user_path(post.user), class: "nickname--user"
   .right-content
     - if user_signed_in?
       .right-content__signed-in
         .mypage
           = link_to "マイページ", user_path(current_user), class: "mypage--link"
+        %ul.contents
+          %li.contents__left
+            日付
+          %li.contents__center
+            タイトル
+          %li.contents__right
+            ニックネーム
         - @posts.each do |post|
-          .my-postlist
-            .myside-image
-            .mypost
-              = link_to post.title, post_path(post.id), class: "mypost--title"
-            .nickname
-              = link_to post.user.nickname, user_path(post.user), class: "u-nickname"
+          %ul.postlist
+            %li.date
+              = post.created_at.strftime('%-m/%-d')
+            %li.post
+              = link_to post.title, post_path(post.id), class: "post--title"
+            %li.nickname
+              = link_to post.user.nickname, user_path(post.user), class: "nickname--user"
     - else
       .right-content__signed-out
         .advertising

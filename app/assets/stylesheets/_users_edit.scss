@@ -1,16 +1,19 @@
 .profile-container {
   height: calc(100vh - 80px);;
   background-color: white;
-  padding: 40px;
+  padding: 50px;
   .profile-content {
     width: 70%;
-    height: 90%;
-    background-color: #D8DCE9;
+    height: 75%;
+    background-image: url(417318.jpg);
+    background-size: contain;
     margin: 0 auto;
     text-align: center;
+    align-items: center;
     &__top {
       font-size: 25px;
-      height: 10%;
+      height: 70px;
+      line-height: 70px;
     }
     &__edit {
       height: 90%;

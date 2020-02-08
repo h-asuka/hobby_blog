@@ -8,7 +8,11 @@
     text-decoration: none;
     color: white;
     font-size: 35px;
+  }:hover {
+    text-decoration: none;
+    color:  #C0C0C0;
   }
+
   // .table-content {
   //   display: flex;
   //   justify-content: space-between;
@@ -29,18 +33,30 @@
     .new-post {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
     .log-out {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
     .user-name {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
     .profile-edit {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
     .profile-photo {
 
@@ -48,10 +64,16 @@
     .new-register {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
     .log-in {
       text-decoration: none;
       color: white;
+    }:hover {
+      text-decoration: none;
+      color: #C0C0C0;
     }
   }
   // .search {

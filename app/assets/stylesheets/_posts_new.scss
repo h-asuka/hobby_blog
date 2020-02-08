@@ -1,12 +1,12 @@
 .post-container {
-  background-image: url(75386336.jpg);
+  background-image: url(asset-path("75386336.jpg"));
   background-size: contain;
   height: calc(100vh - 80px);
   .post-content {
     height: calc(100vh - 80px);
     padding: 50px;
     width: 70%;
-    background-image: url(75386336.jpg);
+    background-image: url(asset-path("75386336.jpg"));
     background-size: contain;
     text-align: center;
     margin: 0 auto;

@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nickname, :email, :image)
+    params.require(:user).permit(:nickname, :email, :image, :password, :password_confirmation)
   end
 
   def move_to_index

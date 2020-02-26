@@ -28,3 +28,4 @@ The "RECORD@job" is a place of the exchange of opinions of the job hunting life.
 # Author
 
 ASUKA HIROSE
+o65.hirose.asuka@gmail.com
